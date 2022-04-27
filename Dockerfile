@@ -16,5 +16,9 @@ ENV BUILD_DIR=/build \
     OPENSSL_STATIC=1 \
     PKG_CONFIG_ALLOW_CROSS=1
 
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y \
+    musl-tools
+
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

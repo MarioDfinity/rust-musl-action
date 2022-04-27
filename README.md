@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build-musl
-      uses: jean-dfinity/rust-musl-action@master
+      uses: MarioDfinity/rust-musl-action@master
       with:
         args: cargo build --target $BUILD_TARGET --release
     - uses: actions/upload-artifact@v2
