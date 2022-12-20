@@ -18,7 +18,7 @@ ENV BUILD_DIR=/build \
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
-    musl-tools
+    musl-tools cmake
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
